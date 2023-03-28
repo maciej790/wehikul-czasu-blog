@@ -6919,6 +6919,13 @@ object.values@^1.1.0:
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
 
+oh-vue-icons@^1.0.0-rc3:
+  version "1.0.0-rc3"
+  resolved "https://registry.npmjs.org/oh-vue-icons/-/oh-vue-icons-1.0.0-rc3.tgz"
+  integrity sha512-+k2YC6piK7sEZnwbkQF3UokFPMmgqpiLP6f/H0ovQFLl20QA5V4U8EcI6EclD2Lt5NMQ3k6ilLGo8XyXqdVSvg==
+  dependencies:
+    vue-demi "^0.12.5"
+
 on-finished@2.4.1:
   version "2.4.1"
   resolved "https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tgz"
@@ -8351,10 +8358,10 @@ safer-buffer@^2.0.2, safer-buffer@^2.1.0, "safer-buffer@>= 2.1.2 < 3", safer-buf
   resolved "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-loader@^10.4.1:
-  version "10.4.1"
-  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-10.4.1.tgz"
-  integrity sha512-aX/iJZTTpNUNx/OSYzo2KsjIUQHqvWsAhhUijFjAPdZTEhstjZI9zTNvkTTwsx+uNUJqUwOw5gacxQMx4hJxGQ==
+sass-loader@^10.1.1:
+  version "10.1.1"
+  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-10.1.1.tgz"
+  integrity sha512-W6gVDXAd5hR/WHsPicvZdjAWHBcEJ44UahgxcIE196fW2ong0ZHMPO1kZuI5q0VlvMQZh32gpv69PLWQm70qrw==
   dependencies:
     klona "^2.0.4"
     loader-utils "^2.0.0"
@@ -9770,6 +9777,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npmjs.org/vm-browserify/-/vm-browserify-1.1.2.tgz"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-demi@^0.12.5:
+  version "0.12.5"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.12.5.tgz"
+  integrity sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==
+
 vue-eslint-parser@^7.1.0:
   version "7.11.0"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.11.0.tgz"
@@ -9859,7 +9871,7 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@*, "vue@^2 || ^3.0.0-0", vue@^2.6.10:
+vue@*, "vue@^2 || ^3.0.0-0", "vue@^2.0.0 || >=3.0.0", vue@^2.6.10, "vue@^3.0.0-0 || ^2.6.0":
   version "2.7.14"
   resolved "https://registry.npmjs.org/vue/-/vue-2.7.14.tgz"
   integrity sha512-b2qkFyOM0kwqWFuQmgd4o+uHGU7T+2z3T+WQp8UBjADfEv2n4FEMffzBmCKNP0IGzOEEfYjvtcC62xaSKeQDrQ==
