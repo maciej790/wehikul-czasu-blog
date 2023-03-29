@@ -31,6 +31,11 @@
   </nav>
 </template>
 
+<page-query>
+  
+ 
+</page-query>
+
 <script setup>
 import { ref } from "vue";
 
