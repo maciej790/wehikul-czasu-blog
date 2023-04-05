@@ -1,11 +1,14 @@
 <template>
   <div class="layout">
     <Header />
+
     <slot />
+    <Footer />
   </div>
 </template>
 <script setup>
 import Header from "../components/Header/Header.vue";
+import Footer from "../components/Footer/Footer.vue";
 </script>
 <static-query>
 query {
@@ -24,6 +27,6 @@ query {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 </style>

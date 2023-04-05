@@ -1,13 +1,15 @@
 <template>
-  <Layout><h1>Home</h1></Layout>
+  <Layout>
+    <article></article>
+  </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: "Hello, world!",
-  },
-};
+<page-query>
+  
+</page-query>
+
+<script setup>
+import SectionTitle from "../components/SectionTitle/SectionTitle.vue";
 </script>
 
 <style></style>

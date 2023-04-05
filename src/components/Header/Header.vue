@@ -33,6 +33,7 @@ const isMenuOpen = ref(false);
 @import "~/assets/styles/_variables.scss";
 .header {
   width: 100%;
+  margin: 0 0 3rem 0;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -49,8 +50,8 @@ const isMenuOpen = ref(false);
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 80px;
-      height: 80px;
+      width: 5rem;
+      height: 5rem;
       color: white;
       background: url("../../assets/images/logo.jpg");
       background-position: center;

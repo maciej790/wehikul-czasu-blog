@@ -1,0 +1,34 @@
+<template>
+  <div class="title">
+    <div class="title__dot"></div>
+    <h3>{{ title }}</h3>
+  </div>
+</template>
+
+<script setup>
+import { defineProps } from "vue";
+defineProps({
+  title: {
+    type: String,
+  },
+});
+</script>
+
+<style lang="scss">
+@import "~/assets/styles/_variables.scss";
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  .title__dot {
+    width: 1rem;
+    height: 1rem;
+    background: $red-main-color;
+    border-radius: 100px;
+    margin: 0 1rem 0 0;
+  }
+}
+</style>
