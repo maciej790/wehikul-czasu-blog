@@ -27,6 +27,6 @@ query {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 </style>
