@@ -1,15 +1,26 @@
 <template>
   <Layout>
-    <article></article>
+    <main class="posts">
+      <RecentPosts />
+      <DailyPost />
+      <SecondWarPost />
+    </main>
   </Layout>
 </template>
 
 <page-query>
-  
+
+
 </page-query>
 
 <script setup>
-import SectionTitle from "../components/SectionTitle/SectionTitle.vue";
+import RecentPosts from "../components/MainPosts/RecentPosts.vue";
+import DailyPost from "../components/MainPosts/DailyPost.vue";
+import SecondWarPost from "../components/MainPosts/SecondWarPost.vue";
 </script>
 
-<style></style>
+<style>
+.posts {
+  width: 100%;
+}
+</style>
