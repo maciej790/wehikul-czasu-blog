@@ -1,5 +1,5 @@
 <template>
-  <section class="secondWar">
+  <section class="wrapper">
     <SectionTitle title="II Wojna - najnowsze" />
     <PostCard />
   </section>

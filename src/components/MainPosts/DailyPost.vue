@@ -1,13 +1,10 @@
 <template>
-  <section class="daily">
+  <section class="wrapper">
     <SectionTitle title="Artykuł dnia" />
     <PostCard />
   </section>
 </template>
 
-<script setup>
-import SectionTitle from "../SectionTitle/SectionTitle.vue";
-import PostCard from "../PostCard/PostCard.vue";
-</script>
+<script setup></script>
 
 <style></style>

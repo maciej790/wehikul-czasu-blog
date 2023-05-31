@@ -33,7 +33,7 @@ const isMenuOpen = ref(false);
 @import "~/assets/styles/_variables.scss";
 .header {
   width: 100%;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
   display: flex;
   flex-direction: column;
   position: sticky;
