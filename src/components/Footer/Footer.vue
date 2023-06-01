@@ -38,7 +38,7 @@
 .footer {
   width: 100%;
   padding: 2rem 0 2rem 0;
-  margin: 1rem 0 0 0;
+  margin: 5rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;

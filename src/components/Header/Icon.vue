@@ -25,8 +25,8 @@ const iconSource = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 
   .icon_img {
     width: 100%;

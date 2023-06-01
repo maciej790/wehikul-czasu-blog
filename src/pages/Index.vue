@@ -10,9 +10,7 @@
         />
       </section>
       <SectionTitle title="Artykuł dnia" />
-      <section class="daily">
-        <PostCard :post="$page.daily.edges[0].node" />
-      </section>
+      <DailySection :data="$page.daily.edges[0].node" />
       <SectionTitle title="II Wojna Światowa - Najnowsze" />
       <section class="secondWar">
         <PostCard
@@ -25,67 +23,83 @@
   </Layout>
 </template>
 
-<page-query>
-query {
-  recent: allPost(sortBy: "date", order: DESC, limit: 3) {
-    edges {
-      node {
-        id
-        title
-        date
-        description
-        time
-        thumbnail
-        tags {
-          id
-          title
-        }
-      }
-    }
-  }
-
-  daily: allPost(sortBy: "date", order: DESC, limit: 1) {
-    edges {
-      node {
-        id
-        title
-        date
-        description
-        time
-        thumbnail
-        tags {
-          id
-          title
-        }
-      }
-    }
-  }
-
-  secondWar: allPost(filter: {tags: {contains: ["II Wojna Światowa"]}} limit: 4) {
-    edges {
-      node {
-        id
-        title
-        date
-        description
-        time
-        thumbnail
-        tags {
-          id
-          title
-        }
-      }
-    }
-  }
-}
-</page-query>
-
 <script setup>
 import SectionTitle from "../components/SectionTitle/SectionTitle.vue";
 import PostCard from "../components/PostCard/PostCard.vue";
+import Button from "../components/Button/Button.vue";
+import ClockAndTime from "../components/ClockAndTime/ClockAndTime.vue";
+import DailySection from "../components/DailySection/DailySection.vue";
+import { computed, onMounted } from "vue";
+
+const firstSentences = computed(() => {
+  {
+    // const content = $page.daily.edges[0].node.content;
+    // const sentences = content.split(". ");
+    // const firstThreeSentences = sentences.slice(0, 3).join(". ");
+    // return firstThreeSentences;
+  }
+});
 </script>
 
+<page-query>
+  query {
+    recent: allPost(sortBy: "date", order: DESC, limit: 3) {
+      edges {
+        node {
+          id
+          title
+          date
+          description
+          time
+          thumbnail
+          tags {
+            id
+            title
+          }
+        }
+      }
+    }
+  
+    daily: allPost(sortBy: "date", order: DESC, limit: 1) {
+      edges {
+        node {
+          id
+          title
+          date
+          description
+          time
+          thumbnail
+          content
+          tags {
+            id
+            title
+          }
+        }
+      }
+    }
+  
+    secondWar: allPost(filter: {tags: {contains: ["II Wojna Światowa"]}} limit: 4) {
+      edges {
+        node {
+          id
+          title
+          date
+          description
+          time
+          thumbnail
+          tags {
+            id
+            title
+          }
+        }
+      }
+    }
+  }
+  </page-query>
+
 <style lang="scss">
+@import "~/assets/styles/_variables.scss";
+
 .posts {
   width: 90%;
   margin: 0;

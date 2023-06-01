@@ -40,18 +40,21 @@ const isMenuOpen = ref(false);
   top: 0;
   left: 0;
   z-index: 999;
+  background: $bg-color;
+
   .header__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     line-height: 3rem;
+    height: 4rem;
 
     .logo {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       color: white;
       background: url("../../assets/images/logo.jpg");
       background-position: center;

@@ -44,7 +44,7 @@ const menuItems = ref([
     justify-content: center;
 
     .menu__link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: center;

@@ -1,7 +1,7 @@
 <template>
   <div class="title">
     <div class="title__dot"></div>
-    <h3>{{ title }}</h3>
+    <h2>{{ title }}</h2>
   </div>
 </template>
 
@@ -23,7 +23,8 @@ defineProps({
   justify-content: flex-start;
   text-transform: uppercase;
   margin: 45px 0 45px 0;
-  font-size: 1.2rem;
+  font-size: 0.7rem;
+
   .title__dot {
     width: 1rem;
     height: 1rem;

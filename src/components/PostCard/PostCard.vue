@@ -1,36 +1,29 @@
 <template>
   <article class="card" :style="imageStyle">
-    <div class="card__belt">
+    <div class="card__belt" v-if="!props.isDaily">
       <div class="belt__top">
-        <h2 class="top__title">{{ props.post.title }}</h2>
-        <div class="top__data">
-          <p class="top__date">{{ props.post.date }}</p>
-          <p class="top__time">
-            <img
-              :src="require(`../../assets/icons/clock.png`)"
-              alt="time"
-              class="time__clock"
-            />
-            {{ timeString }}
-          </p>
-        </div>
+        <h2 class="top__title">
+          {{ props.post.title }}
+        </h2>
+        <ClockAndTime :data="props.post" />
       </div>
-      <div class="belt__bottom">
-        <p class="bottom__description">
-          {{ props.post.description }}
-        </p>
-      </div>
+      <div class="belt__bottom"></div>
     </div>
   </article>
 </template>
 
 <script setup>
+import ClockAndTime from "../ClockAndTime/ClockAndTime.vue";
 import { computed } from "vue";
 
 const props = defineProps({
   post: {
     type: Object,
     required: true,
+  },
+
+  isDaily: {
+    type: Boolean,
   },
 });
 
@@ -57,7 +50,7 @@ const timeString = computed(() => {
 .card {
   width: 100%;
   border-radius: 10px;
-  height: 450px;
+  min-height: 300px;
   position: relative;
 
   .card__belt {
@@ -69,7 +62,6 @@ const timeString = computed(() => {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    font-size: 1.1rem;
 
     .belt__top {
       width: 100%;
@@ -78,7 +70,9 @@ const timeString = computed(() => {
       .top__title {
         color: $red-main-color;
         text-transform: uppercase;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
+        font-size: 1rem;
+        line-height: 130%;
       }
 
       .top__data {
@@ -103,11 +97,10 @@ const timeString = computed(() => {
 
     .belt__bottom {
       width: 100%;
-      padding: 10px;
 
       .bottom__description {
         text-align: justify;
-        line-height: 150%;
+        line-height: 130%;
       }
     }
   }
