@@ -27,7 +27,11 @@ query {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1.2rem;
   font-size: 0.9rem;
+
+  @media only screen and (min-width: $desktop) {
+    padding: 0 4rem 0 4rem;
+  }
 }
 </style>

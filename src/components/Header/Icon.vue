@@ -21,12 +21,17 @@ const iconSource = computed(() => {
 </script>
 
 <style lang="scss">
+@import "~/assets/styles/_variables.scss";
 .menuIcon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
+
+  @media only screen and (min-width: $desktop) {
+    display: none;
+  }
 
   .icon_img {
     width: 100%;

@@ -35,13 +35,29 @@ const menuItems = ref([
   justify-content: center;
   margin: 2rem 0 0 0;
 
+  @media only screen and (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    top: 7rem;
+    left: 0;
+    border-bottom: 1px solid $white-color;
+    width: 50%;
+  }
+
   .nav__menu {
     width: 100%;
     padding: 0 0 0 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
+    @media only screen and (min-width: $desktop) {
+      padding: 0;
+      align-items: center;
+    }
 
     .menu__link {
       font-size: 1.2rem;
@@ -53,6 +69,12 @@ const menuItems = ref([
       .link__tag {
         color: $white-color;
         text-decoration: underline;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: $desktop) {
+          text-decoration: none;
+          font-size: 1rem;
+        }
       }
     }
   }

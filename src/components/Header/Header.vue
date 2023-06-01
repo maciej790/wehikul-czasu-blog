@@ -42,6 +42,13 @@ const isMenuOpen = ref(false);
   z-index: 999;
   background: $bg-color;
 
+  @media only screen and (min-width: $desktop) {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3rem 0 10rem 0;
+  }
+
   .header__top {
     display: flex;
     justify-content: space-between;
@@ -59,6 +66,12 @@ const isMenuOpen = ref(false);
       background: url("../../assets/images/logo.jpg");
       background-position: center;
       background-size: cover;
+
+      @media only screen and (min-width: $desktop) {
+        height: 8rem;
+        width: 8rem;
+        margin: 0 1rem 0 0;
+      }
 
       .logo__img {
         width: 100%;
@@ -82,14 +95,43 @@ const isMenuOpen = ref(false);
     transform: scale(0);
     transition: opacity 0.2s ease-in-out;
 
+    @media only screen and (min-width: $desktop) {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      min-height: auto;
+      position: static;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 0;
+      background: $bg-color;
+    }
+
     .header__motto {
       width: 100%;
       text-align: center;
       margin: 2rem 0 0 0;
 
+      @media only screen and (min-width: $desktop) {
+        margin: 0;
+        text-align: right;
+        font-size: 1.7rem;
+        width: 50%;
+      }
+
       .red {
         color: $red-main-color;
       }
+
+      // @media only screen and (min-width: $desktop) {
+      //   top: 0;
+      //   right: 0;
+      //   text-align: right;
+      //   background: orange;
+      //   width: 30%;
+      // }
     }
     &.open {
       transform: scale(1);

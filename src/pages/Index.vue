@@ -101,7 +101,7 @@ const firstSentences = computed(() => {
 @import "~/assets/styles/_variables.scss";
 
 .posts {
-  width: 90%;
+  width: 100%;
   margin: 0;
   padding: 0;
 
