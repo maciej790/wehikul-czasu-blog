@@ -1,18 +1,15 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
+    <Header />
+
     <slot />
+    <Footer />
   </div>
 </template>
-
+<script setup>
+import Header from "../components/Header/Header.vue";
+import Footer from "../components/Footer/Footer.vue";
+</script>
 <static-query>
 query {
   metadata {
@@ -21,31 +18,20 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
+<style lang="scss">
+@import "~/assets/styles/_variables.scss";
 .layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
+  min-height: 100vh;
+  background: $bg-color;
+  color: $white-color;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
+  padding: 1.2rem;
+  font-size: 0.9rem;
 
-.nav__link {
-  margin-left: 20px;
+  @media only screen and (min-width: $desktop) {
+    padding: 0 4rem 0 4rem;
+  }
 }
 </style>

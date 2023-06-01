@@ -6,5 +6,35 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/posts/**/*.md',
+        typeName: 'Post',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true,
+          },
+        },
+        remark: {
+          //Config options can be added here
+        }
+      },
+    },
+  ],
+  
+  transformers: {
+    remark: {
+      //Config options can be added here
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        // ...global plugins
+      ]
+    }
+  }
 }
