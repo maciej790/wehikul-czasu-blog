@@ -2,9 +2,7 @@
   <nav class="nav">
     <ul class="nav__menu" v-for="(item, index) in menuItems" :key="index">
       <li class="menu__link">
-        <g-link class="link__tag" :to="item.path" :active-class="active">{{
-          item.label
-        }}</g-link>
+        <g-link class="link__tag" :to="item.path">{{ item.label }}</g-link>
       </li>
     </ul>
   </nav>
@@ -22,7 +20,7 @@ const menuItems = ref([
   { label: "Home", path: "/" },
   { label: "Artykuły", path: "/artykuly" },
   { label: "O autorze", path: "/o_autorze" },
-  { label: "Kontakt", path: "/kontatk" },
+  { label: "Współpraca", path: "/wspolpraca" },
 ]);
 </script>
 

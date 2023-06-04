@@ -12,7 +12,7 @@
       </p>
     </div>
     <div class="footer__right">
-      <h3 class="contact__title">Kontakt:</h3>
+      <h3 class="contact__title">Kontakt</h3>
       <ul class="contact__box">
         <li class="contact__item">+48 21374202</li>
         <li class="contact__item">2137@gmail.com</li>
@@ -25,13 +25,15 @@
 
 <style lang="scss">
 @import "~/assets/styles/_variables.scss";
+
 .footer {
   width: 100%;
   margin: 5rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 0.05rem solid $white-color;
+  border-top: 2px solid $gray-color;
+  padding: 0 1rem 1rem 1rem;
 
   @media only screen and (min-width: $desktop) {
     flex-direction: row;

@@ -13,6 +13,8 @@
       <div class="belt__bottom"></div>
     </div>
   </article>
+
+  <!-- <g-link class="post-card__link" :to="post.path"></g-link> -->
 </template>
 
 <script setup>
@@ -50,14 +52,16 @@ const imageStyle = computed(() => {
   transition: transform 0.5s ease-out;
 
   .card__category {
-    width: 160px;
+    width: 180px;
     min-height: 30px;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem;
-    border-radius: 10px;
+    border-radius: 100px;
+    position: relative;
+    top: 0.5rem;
+    left: 0.5rem;
   }
 
   .card__belt {

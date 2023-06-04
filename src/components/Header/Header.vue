@@ -45,7 +45,7 @@ const isMenuOpen = ref(false);
     position: relative;
     flex-direction: row;
     justify-content: space-between;
-    margin: 1rem 0 5rem 0;
+    margin: 1rem 0 4rem 0;
   }
 
   .header__top {
@@ -54,6 +54,10 @@ const isMenuOpen = ref(false);
     align-items: center;
     line-height: 3rem;
     height: 4rem;
+
+    @media only screen and (min-width: $desktop) {
+      height: 8rem;
+    }
 
     .logo {
       display: flex;

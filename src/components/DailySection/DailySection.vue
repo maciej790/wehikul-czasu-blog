@@ -15,7 +15,7 @@
       <div class="bottom__sentence">
         <p v-html="firstSentences"></p>
       </div>
-      <Button title="Czytaj dalej" />
+      <Button title="Czytaj dalej" :link="props.data.path" />
     </div>
   </section>
 </template>
@@ -25,6 +25,7 @@ import PostCard from "../../../../wehikul-czasu-blog/src/components/PostCard/Pos
 import ClockAndTime from "../ClockAndTime/ClockAndTime.vue";
 import Button from "../Button/Button.vue";
 import { computed } from "vue";
+
 const props = defineProps({
   data: {
     type: Object,
@@ -83,14 +84,14 @@ const firstSentences = computed(() => {
     }
 
     .card__category {
-      width: 160px;
+      width: 180px;
       min-height: 30px;
       background: $red-main-color;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 0 0 1.5rem 0;
-      border-radius: 10px;
+      border-radius: 100px;
     }
 
     .bottom__title {

@@ -3,34 +3,42 @@
     <main class="posts">
       <SectionTitle title="Najnowsze artykuły" />
       <section class="recent">
-        <PostCard
+        <g-link
           class="recent__card"
           v-for="edge in $page.recent.edges"
           :key="edge.node.id"
-          :post="edge.node"
-        />
+          :to="edge.node.path"
+        >
+          <PostCard class="recent__card" :post="edge.node" />
+        </g-link>
       </section>
+
       <SectionTitle title="Artykuł dnia" />
       <DailySection :data="$page.daily.edges[0].node" />
       <SectionTitle title="II Wojna Światowa - Najnowsze" />
       <section class="secondWar">
-        <PostCard
+        <g-link
           class="secondWar__card"
           v-for="edge in $page.secondWar.edges"
           :key="edge.node.id"
-          :post="edge.node"
-        />
+          :to="edge.node.path"
+        >
+          <PostCard class="secondWar__card" :post="edge.node" />
+        </g-link>
       </section>
       <SectionTitle title="Reszta artykułów" />
       <section class="other">
-        <PostCard
+        <g-link
+          class="other__card"
           v-for="edge in $page.other.edges"
           :key="edge.node.id"
-          :post="edge.node"
-        />
+          :to="edge.node.path"
+        >
+          <PostCard class="other__card" :post="edge.node" />
+        </g-link>
       </section>
       <div class="paginatiom">
-        <Button title="Zobacz wszystkie" class="btn" />
+        <Button title="Zobacz wszystkie" class="btn" :link="'/artykuly'" />
       </div>
     </main>
   </Layout>
@@ -54,6 +62,7 @@ import Button from "../components/Button/Button.vue";
           description
           time
           thumbnail
+          path
           tags {
             id
             title
@@ -71,6 +80,7 @@ import Button from "../components/Button/Button.vue";
           description
           time
           thumbnail
+          path
           tags {
             id
             title
@@ -89,6 +99,7 @@ import Button from "../components/Button/Button.vue";
           time
           thumbnail
           content
+          path
           tags {
             id
             title
@@ -106,6 +117,7 @@ import Button from "../components/Button/Button.vue";
           description
           time
           thumbnail
+          path
           tags {
             id
             title
@@ -145,6 +157,14 @@ import Button from "../components/Button/Button.vue";
     align-items: center;
     position: relative;
 
+    .recent__card {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      color: $white-color;
+    }
+
     @media only screen and (min-width: $desktop) {
       .recent__card:nth-of-type(1) {
         grid-row-start: 1;
@@ -153,18 +173,24 @@ import Button from "../components/Button/Button.vue";
         grid-column-end: 2;
         height: 100%;
 
-        .card__belt {
-          min-height: 150px;
+        .recent__card {
+          .card__belt {
+            min-height: 150px;
+          }
         }
 
-        .belt__top {
-          flex-direction: row;
-          align-items: flex-start;
+        .recent__card {
+          .belt__top {
+            flex-direction: row;
+            align-items: flex-start;
+          }
         }
 
-        .top__title {
-          width: 65%;
-          margin: 0;
+        .recent__card {
+          .top__title {
+            width: 65%;
+            margin: 0;
+          }
         }
       }
 
@@ -192,6 +218,18 @@ import Button from "../components/Button/Button.vue";
       gap: 40px;
       margin: 0 0 100px 0;
     }
+
+    .recent__carousel {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: orange;
+    }
+  }
+
+  .slider {
+    width: 100%;
   }
 
   .secondWar {
@@ -202,6 +240,12 @@ import Button from "../components/Button/Button.vue";
     justify-items: center;
     align-items: center;
 
+    .secondWar__card {
+      width: 100%;
+      text-decoration: none;
+      color: $white-color;
+    }
+
     @media only screen and (min-width: $desktop) {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -211,6 +255,8 @@ import Button from "../components/Button/Button.vue";
 
       .secondWar__card {
         width: 100%;
+        text-decoration: none;
+        color: $white-color;
       }
     }
   }
@@ -219,7 +265,7 @@ import Button from "../components/Button/Button.vue";
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px 40px;
-    margin: 0 0 2rem 0;
+    margin: 0 0 4rem 0;
 
     @media only screen and (min-width: $desktop) {
       display: grid;
@@ -227,6 +273,12 @@ import Button from "../components/Button/Button.vue";
       gap: 40px 40px;
       justify-items: center;
       align-items: center;
+    }
+
+    .other__card {
+      width: 100%;
+      color: $white-color;
+      text-decoration: none;
     }
   }
 
