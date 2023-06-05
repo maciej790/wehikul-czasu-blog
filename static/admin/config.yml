@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: maciej790/wehikul-czasu-blog
-  branch: main
+  branch: master
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
