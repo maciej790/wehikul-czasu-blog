@@ -22,8 +22,8 @@ defineProps({
   align-items: center;
   justify-content: flex-start;
   text-transform: uppercase;
-  margin: 45px 0 45px 0;
-  font-size: 0.7rem;
+  margin: 60px 0 60px 0;
+  font-size: 0.8rem;
 
   @media only screen and (min-width: $desktop) {
     font-size: 0.9rem;

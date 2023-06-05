@@ -134,13 +134,13 @@ import Button from "../components/Button/Button.vue";
 @import "~/assets/styles/_variables.scss";
 
 .posts {
-  width: 90%;
+  width: 85%;
   margin: 0;
   padding: 0;
 
   @media only screen and (min-width: $desktop) {
     font-size: 1rem;
-    width: 85%;
+    width: 80%;
   }
 
   @media only screen and (min-width: $high-desktop) {
@@ -152,7 +152,7 @@ import Button from "../components/Button/Button.vue";
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 45px 0px;
+    gap: 60px 0px;
     justify-items: center;
     align-items: center;
     position: relative;
